@@ -41,8 +41,8 @@ export default function MerchantRegister() {
         },
         body: JSON.stringify({
           name,
-          return_url: returnUrl,
-          cancel_url: cancelUrl,
+          return_url: returnUrl.trim() || undefined,
+          cancel_url: cancelUrl.trim() || undefined,
           webhook_url: webhookUrl,
         }),
       });
